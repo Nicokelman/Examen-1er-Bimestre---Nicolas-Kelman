@@ -6,13 +6,13 @@ using UnityEngine;
 
 public class Prueba : MonoBehaviour
 {
-    public string producto1;
-    public string producto2;
-    public string producto3;
+    public string prod1;
+    public string prod2;
+    public string prod3;
 
-    public float precio1;
-    public float precio2;
-    public float precio3;
+    public float prec1;
+    public float prec2;
+    public float prec3;
 
     public int cant1;
     public int cant2;
@@ -29,28 +29,28 @@ public class Prueba : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (precio1 < 1 || precio2 < 1 || precio3 < 1 || cant1 < 1 || cant2 < 1 || cant3 < 1)
+        if (prec1 < 1 || prec2 < 1 || prec3 < 1 || cant1 < 1 || cant2 < 1 || cant3 < 1)
         {
             Debug.Log("Error");
         }
         if (cant1 > 3)
         {
-            descuento1 = precio1 * 0.20f;
+            descuento1 = prec1 * 0.20f;
         }
         if (cant2 > 3)
         {
-            descuento2 = precio2 * 0.20f;
+            descuento2 = prec2 * 0.20f;
         }
         if (cant3 > 3)
         {
-            descuento3 = precio3 * 0.20f;
+            descuento3 = prec3 * 0.20f;
         }
 
-        montototalSinDescuento = precio1 + precio2 + precio3;
+        montototalSinDescuento = prec1 + prec2 + prec3;
 
         descuentos = descuento1 + descuento2 + descuento3;
 
-        montototalConDescuento = (precio1 - descuento1) + (precio2 - descuento2) + (precio3 - descuento3);
+        montototalConDescuento = (prec1 - descuento1) + (prec2 - descuento2) + (prec3 - descuento3);
 
         Debug.Log("El monto total sin descuento es : " + montototalSinDescuento);
 
